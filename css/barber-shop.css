@@ -7,7 +7,7 @@
 	user-select: none;
 
 	overflow: hidden;
-	position: relative;
+	position: absolute;
 	top: 10px;
 	left: 37.5%;
 	z-index: 2000;
