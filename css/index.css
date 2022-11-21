@@ -248,12 +248,29 @@ hr:before,
   border: 1px solid rgba(255,255,255,0.5);
   border-right: 1px solid rgba(255,255,255,0.2);
   border-bottom: 1px solid rgba(255,255,255,0.2);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
   backdrop-filter: blur(25px);
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   -o-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
+  z-index: 1000;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+#post {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 .imgHover,
 .error404 #error-wrap .error-content .error-img img,
@@ -3378,7 +3395,8 @@ h1.page-title + .tag-cloud-list {
 #page-header {
   position: relative;
   width: 100%;
-  background-color: #83855d;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -5375,7 +5393,7 @@ blockquote.pullquote.right {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.65);
   content: '';
 }
 [data-theme='dark'] #article-container code {
