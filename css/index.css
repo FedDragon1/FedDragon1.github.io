@@ -230,12 +230,13 @@ hr:before,
   -webkit-box-shadow: var(--card-box-shadow);
   box-shadow: var(--card-box-shadow);
   border: 1px solid rgba(255,255,255,0);
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   backdrop-filter: blur(5px);
+  position: relative;
 }
 .cardHover:hover,
 .error404 #error-wrap .error-content:hover,
@@ -248,10 +249,6 @@ hr:before,
   border: 1px solid rgba(255,255,255,0.5);
   border-right: 1px solid rgba(255,255,255,0.2);
   border-bottom: 1px solid rgba(255,255,255,0.2);
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
   backdrop-filter: blur(25px);
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
@@ -1425,7 +1422,7 @@ input::placeholder {
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: url("/img/index_img.jpg");
+  background: url("/img/index_img.webp");
   background-attachment: local;
   background-position: center;
   background-size: cover;
@@ -2699,6 +2696,7 @@ h1.page-title + .tag-cloud-list {
   transform: rotate(540deg);
 }
 #aside-content .card-info #card-info-btn {
+  border-radius: 5px;
   display: block;
   margin-top: 14px;
   background-color: var(--btn-bg);
@@ -2771,6 +2769,7 @@ h1.page-title + .tag-cloud-list {
   overflow: hidden;
   width: 4.2em;
   height: 4.2em;
+  border-radius: 5px;
 }
 #aside-content .aside-list > .aside-list-item .content {
   -webkit-box-flex: 1;
@@ -2993,6 +2992,7 @@ h1.page-title + .tag-cloud-list {
   -o-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  border-radius: 2px;
 }
 #aside-content #card-toc .toc-content .toc-link:hover {
   color: #83855d;
@@ -3366,10 +3366,19 @@ h1.page-title + .tag-cloud-list {
   background-size: cover;
 }
 #footer-wrap {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: relative;
   padding: 40px 20px;
   color: var(--light-grey);
+  backdrop-filter: blur(2px);
   text-align: center;
+}
+#footer-wrap:hover {
+  backdrop-filter: blur(5px);
 }
 #footer-wrap a {
   color: var(--light-grey);
@@ -4022,7 +4031,10 @@ h1.page-title + .tag-cloud-list {
   position: relative;
   margin: 40px 0 10px;
   padding: 10px 16px;
-  border: 1px solid var(--light-grey);
+  border: 1px solid rgba(255,255,255,0);
+  border-right: 1px solid rgba(255,255,255,0);
+  border-bottom: 1px solid rgba(255,255,255,0);
+  border-radius: 8px;
   -webkit-transition: box-shadow 0.3s ease-in-out;
   -moz-transition: box-shadow 0.3s ease-in-out;
   -o-transition: box-shadow 0.3s ease-in-out;
@@ -4038,6 +4050,9 @@ h1.page-title + .tag-cloud-list {
   font-size: 1.3em;
 }
 #post .post-copyright:hover {
+  border: 1px solid rgba(255,255,255,0.5);
+  border-right: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
   -webkit-box-shadow: 0 0 8px 0 rgba(232,237,250,0.6), 0 2px 4px 0 rgba(232,237,250,0.5);
   box-shadow: 0 0 8px 0 rgba(232,237,250,0.6), 0 2px 4px 0 rgba(232,237,250,0.5);
 }
@@ -4079,6 +4094,12 @@ h1.page-title + .tag-cloud-list {
 }
 #post .ads-wrap {
   margin: 40px 0;
+}
+#post .pagination-post {
+  border-radius: 5px;
+}
+#post .relatedPosts .relatedPosts-list div {
+  border-radius: 5px;
 }
 .relatedPosts {
   margin-top: 40px;
