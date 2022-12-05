@@ -2222,7 +2222,7 @@ figure.highlight pre .number {
   padding: 0 16px;
 }
 .pagination span {
-  border-radius: 2px;
+  border-radius: 5px;
 }
 .category-lists .category-title {
   font-size: 2.57em;
@@ -3571,7 +3571,7 @@ h1.page-title + .tag-cloud-list {
 #page-header.nav-fixed #nav {
   position: fixed;
   top: -60px;
-  z-index: 91;
+  z-index: 2001;
   background: rgba(255,255,255,0.8);
   -webkit-box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
   box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
@@ -3688,7 +3688,7 @@ h1.page-title + .tag-cloud-list {
 #nav {
   position: absolute;
   top: 0;
-  z-index: 90;
+  z-index: 2000;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -3949,7 +3949,7 @@ h1.page-title + .tag-cloud-list {
   overflow-wrap: break-word;
 }
 #article-container a {
-  color: #00e6d6;
+  color: #99a9bf;
 }
 #article-container a:hover {
   text-decoration: underline;
@@ -5421,7 +5421,7 @@ blockquote.pullquote.right {
   --hltools-color: #90a4ae;
   --hlnumber-bg: rgba(23,23,23,0.6);
   --hlnumber-color: rgba(255,255,255,0.4);
-  --hlscrollbar-bg: #1f1f1f;
+  --hlscrollbar-bg: linear-gradient(45deg, #303030 0% 5.2631578947368425%, #222 5.2631578947368425% 10.226315789473684%, #303030 10.226315789473684% 15.789473684210527%, #222 15.789473684210527% 21.05263157894737%, #303030 21.05263157894737% 26.315789473684212%, #222 26.315789473684212% 31.578947368421055%, #303030 31.578947368421055% 36.8421052631579%, #222 36.8421052631579% 42.10526315789474%, #303030 42.10526315789474% 47.36842105263158%, #222 47.36842105263158% 52.631578947368425%, #303030 52.631578947368425% 57.89473684210527%, #222 57.89473684210527% 63.15789473684211%, #303030 63.15789473684211% 68.42105263157896%, #222 68.42105263157896% 73.6842105263158%, #303030 73.6842105263158% 78.94736842105263%, #222 78.94736842105263% 84.21052631578948%, #303030 84.21052631578948% 89.47368421052633%, #222 89.47368421052633% 94.73684210526316%, #303030 94.73684210526316% 100%);
   --hlexpand-bg: linear-gradient(180deg, rgba(23,23,23,0.6), rgba(23,23,23,0.9));
   --scrollbar-color: #ae96b6;
   --timeline-bg: #1f1f1f;
@@ -5459,7 +5459,8 @@ blockquote.pullquote.right {
 }
 [data-theme='dark'] #page-header.nav-fixed > #nav,
 [data-theme='dark'] #page-header.not-top-img > #nav {
-  background: rgba(18,18,18,0.8);
+  background: transparent;
+  backdrop-filter: blur(25px);
   -webkit-box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
   box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
 }
